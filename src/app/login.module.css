@@ -1,0 +1,8 @@
+/* login.module.css */
+.borderGradient {
+    background: #0F172A; /* Set base color */
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.5) 35%, rgba(15, 23, 42, 0.5) 100%); /* Adjust opacity */
+    border-radius: 10px;
+    margin-top: 220px;
+}
