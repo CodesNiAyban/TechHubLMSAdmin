@@ -8,8 +8,6 @@ import { loginSchema } from "./lib/validation";
 
 const nextAuthConfig: NextAuthConfig = {
   providers: [
-    Google,
-    GitHub,
     Credentials({
       async authorize(credentials) {
         try {

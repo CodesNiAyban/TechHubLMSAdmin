@@ -47,7 +47,7 @@ export const {
           getTwoFactorConfirmationByUserId(existingUser.id);
 
         if (!twoFactorConfirmation) {
-          return false; 
+          return false;
         }
 
         const hasExpired = new Date(twoFactorConfirmation.expires) < new Date();
@@ -56,6 +56,12 @@ export const {
           await prisma.twoFactorConfirmation.delete({
             where: { id: twoFactorConfirmation.id }
           });
+          return false;
+        }
+
+        const adminVerify = existingUser.role
+
+        if (adminVerify !== "ADMIN") {
           return false;
         }
       }
